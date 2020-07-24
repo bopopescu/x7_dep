@@ -65,7 +65,7 @@ def parse_dependency_links(*filenames):
             if re.match(r'\s*-[ef]\s+', line):
                 line = re.sub(r'\s*-[ef]\s+', '', line)
                 line = re.sub(r'\s*git\+https', 'http', line)
-                line = re.sub(r'\.git#', '/tarball/master#', line)
+                line = re.sub(r'\.git#', '/tarball/main#', line)
                 dependency_links.append(line)
     return dependency_links
 
